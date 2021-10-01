@@ -1,13 +1,13 @@
 version: "3.8"
 
 services:
-  back:
+  backend:
     build: .
     container_name: backend
     expose:
       - 8000 
   
-  front:
+  frontend:
     build: ./todofront
     container_name: frontend
     ports:
