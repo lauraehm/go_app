@@ -158,10 +158,10 @@ func databaseConnection() {
 }
 
 func main() {
-	// defer db.Close()
+	defer db.Close()
 
-	// db.Debug().DropTableIfExists(&TodoItemModel{})
-	// db.Debug().AutoMigrate(&TodoItemModel{})
+	db.Debug().DropTableIfExists(&TodoItemModel{})
+	db.Debug().AutoMigrate(&TodoItemModel{})
 
 	log.Info("Starting Todolist API server")
 	router := mux.NewRouter()
