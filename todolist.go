@@ -67,13 +67,13 @@ func databaseConnection() {
 	}
 
 	db = gormDb
+
+	db.Debug().DropTableIfExists(&TodoItemModel{})
+	db.Debug().AutoMigrate(&TodoItemModel{})
 }
 
 func main() {
 	// defer db.Close()
-
-	db.Debug().DropTableIfExists(&TodoItemModel{})
-	db.Debug().AutoMigrate(&TodoItemModel{})
 
 	log.Info("Starting Todolist API server")
 	router := mux.NewRouter()
