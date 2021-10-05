@@ -67,7 +67,6 @@ func databaseConnection() {
 	}
 
 	db = gormDb
-
 }
 
 func main() {
