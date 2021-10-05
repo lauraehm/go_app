@@ -50,8 +50,8 @@ func databaseConnection() {
 	authenticationToken, err := auth.BuildAuthToken(
 		context.TODO(),
 		"pepito-aurora-workshop-4.cluster-cynjynn6hacb.us-east-1.rds.amazonaws.com:3306", // Database Endpoint (With Port)
-		"us-east-1", // AWS Region
-		"goapp",     // Database Account
+		"us-east-1",   // AWS Region
+		"application", // Database Account
 		cfg.Credentials,
 	)
 	if err != nil {
