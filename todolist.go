@@ -51,7 +51,7 @@ func databaseConnection() {
 		context.TODO(),
 		"pepito-aurora-workshop-4.cluster-cynjynn6hacb.us-east-1.rds.amazonaws.com:3306", // Database Endpoint (With Port)
 		"us-east-1", // AWS Region
-		"root",      // Database Account
+		"goapp",     // Database Account
 		cfg.Credentials,
 	)
 	if err != nil {
