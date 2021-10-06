@@ -59,7 +59,7 @@ func databaseConnection() {
 	}
 
 	dsn := fmt.Sprintf("%s:%s@tcp(%s)/%s?tls=true&allowCleartextPasswords=true",
-		"root", authenticationToken, "pepito-aurora-workshop-4.cluster-cynjynn6hacb.us-east-1.rds.amazonaws.com:3306", "todolist")
+		"application", authenticationToken, "pepito-aurora-workshop-4.cluster-cynjynn6hacb.us-east-1.rds.amazonaws.com:3306", "todolist")
 
 	gormDb, err := gorm.Open("mysql", dsn)
 	if err != nil {
