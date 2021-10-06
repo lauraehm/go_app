@@ -63,7 +63,7 @@ func databaseConnection() {
 
 	gormDb, err := gorm.Open("mysql", dsn)
 	if err != nil {
-		panic(err)
+		panic("DEBUG: " + err.Error())
 	}
 
 	db = gormDb
